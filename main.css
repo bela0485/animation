@@ -1,3 +1,6 @@
+/* NOTE: */
+/* This file is not actually used at all, I just moved the CSS into its own file for easier viewing */
+/* Changes to this file will do nothing unless you copy it to the SVG */
 #top {
     position: relative;
     animation: shootgun 4s infinite;
