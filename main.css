@@ -18,6 +18,8 @@
 }
 
 @keyframes shootgun {
+    /* move the gun back and forth */
+    /* first and last "transform (0px)" is needed to make sure the gun moves fast, it translates smoothly from the last known frame */
     34%   {transform: translate(0px);}
     35%   {transform: translate(15px);}
     36%   {transform: translate(0px);}
@@ -44,16 +46,23 @@
 }
 
 @keyframes moveeye {
-    0%   {transform:  translate(0px);}
+    /* move eye left, then back to middle */
+    0%   {transform: translate(0px);}
     10%  {transform: translate(30px);}
-    15%  {transform:  translate(0px);}
+    15%  {transform: translate(0px);}
+
+    /* move eye right, then back to middle */
     25%  {transform: translate(-18px, 5px);}
     30%  {transform: translate(0px);}
+
+    /* do nothing for the remaining 70%, this is when the gun shoots */
 }
 
 @keyframes muzzleflare {
+    /* start invisible so that the flare isn't always visible */
     0%    {opacity: 0;}
 
+    /* each flare happens 2% faster than the gun moving, this just makes it look better */
     32%   {opacity: 0;}
     33%   {opacity: 1;}
     36%   {opacity: 0;}
@@ -78,5 +87,6 @@
     83%   {opacity: 1;}
     86%   {opacity: 0;}
 
+    /* added this to prevent it from slowly becoming visible again */
     100%  {opacity: 0;}
 }
